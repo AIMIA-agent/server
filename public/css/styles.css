@@ -4,6 +4,17 @@
   word-wrap: break-word;
 }
 
+#loginButton {
+  background-color: #17a2b8; /* Bootstrap info blue */
+  border-color: #17a2b8;
+  color: white;
+}
+
+#loginButton:hover {
+  background-color: #138496;
+  border-color: #117a8b;
+}
+
 .chat-box {
   height: 80%; /* Fixed height for chat box */
   display: flex;

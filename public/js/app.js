@@ -149,4 +149,18 @@ audioToggleButton.addEventListener('click', () => {
     sendButton.style.display = isAudioInput ? 'none' : 'block';
 });
 
+document.getElementById('loginButton').addEventListener('click', function() {
+    window.location.href = './login.html'; // Redirects to the login page
+});
+
+
+
+
+
+
+
+
+
+
+
 renderModules();

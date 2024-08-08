@@ -66,7 +66,6 @@ function handleSignIn(e) {
             alert('Failed to sign in: ' + error.message);
         });
 }
-
 // // Handle Sign Out
 // function handleSignOut() {
 //     signOut(auth).then(() => {
