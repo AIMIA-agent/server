@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Dashboard</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+    <div class="container-fluid vh-100 d-flex flex-column">
+        <div class="row flex-grow-1">
+            <div class="col-3 p-3 bg-light">
+                <h2 class="font-weight-bold mb-3">Career Dashboard</h2>
+                <p>Welcome to bla bla</p>
+                <button id="chatToggleButton" class="btn btn-primary btn-block mb-3">AIMIA the Career AI Chat Bot</button>
+                <div class="dropdown">
+                    <button id="dropdownToggleButton" class="btn btn-secondary btn-block dropdown-toggle">Career Assessment Modules</button>
+                    <div id="dropdownMenu" class="dropdown-menu" style="display:none;">
+                        <button data-assessment="Basic Interests" class="dropdown-item">
+                            <i class="fas fa-brain"></i> Basic Interests
+                        </button>
+                        <button data-assessment="Skills & Knowledge" class="dropdown-item">
+                            <i class="fas fa-user-graduate"></i> Skills & Knowledge
+                        </button>
+                        <button data-assessment="Values" class="dropdown-item">
+                            <i class="fas fa-balance-scale"></i> Values
+                        </button>
+                        <button data-assessment="Personality" class="dropdown-item">
+                            <i class="fas fa-mask"></i> Personality
+                        </button>
+                        <button data-assessment="Needs" class="dropdown-item">
+                            <i class="fas fa-hands-helping"></i> Needs
+                        </button>
+                        <button data-assessment="Functional Measures" class="dropdown-item">
+                            <i class="fas fa-briefcase"></i> Functional Measures
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 d-flex flex-column main">
+                <div class="bg-white shadow-sm p-3 controls" id="progressContainer">
+                    <div class="d-flex mb-3" id="modulesContainer"></div>
+                </div>
+                <div id="chatContainer" class="bg-light p-3 chatbot-window controls" style="display:none;">
+                    <div class="bg-white rounded p-3 shadow flex-grow-1 d-flex flex-column chat-box">
+                        <h3 class="font-weight-bold mb-3">AIMIA the Career AI Chat Bot</h3>
+                        <div id="messagesContainer" class="chat-messages mb-3"></div>
+                    </div>
+                    <div class="input-container p-3 bg-white shadow-sm">
+                        <div id="audioToggleButton" class="d-flex align-items-center bg-secondary rounded-pill p-1 cursor-pointer mr-2" style="width: 48px; height: 24px;">
+                            <div id="audioToggleThumb" class="bg-white rounded-circle" style="width: 24px; height: 24px;"></div>
+                        </div>
+                        <input id="messageInput" type="text" class="form-control" placeholder="Message AIMIA the Career Chat Bot AI" />
+                        <button id="sendButton" class="btn btn-primary ml-2">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <button id="recordButton" class="btn btn-danger ml-2" style="display:none;">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                        <button onclick="handleNextModule()" class="btn btn-success ml-2 next-btn">Next Module</button>
+                    </div>
+                </div>
+                <div id="assessmentContainer" class="flex-fill bg-light p-3 overflow-auto" style="display:none;">
+                    <div class="bg-white rounded p-3 shadow">
+                        <h3 id="assessmentTitle" class="font-weight-bold mb-3"></h3>
+                        <div class="d-flex align-items-center justify-content-center" style="height: 300px;">
+                            <p id="assessmentContent">Graphs and text for the selected assessment would be displayed here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  <script src="./js/app.js"></script>
+
+</body>
+</html>
